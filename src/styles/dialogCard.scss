@@ -17,19 +17,16 @@
 
         background-color: #EFEFEF;
         border-radius: 50%;
-
-        flex-shrink: 0;
     }
 
     &__content {
+        width: 54%;
         height: 47px;
         margin-left: 10px;
         margin-right: 20px;
 
         display: flex;
         flex-direction: column;
-
-        flex-grow: 1;
 
         &__name {
             margin-bottom: 2px;
@@ -46,6 +43,8 @@
         }
 
         &__text {
+            margin: 0;
+
             font-family: 'Inter';
             font-style: normal;
             font-weight: 500;
@@ -58,6 +57,8 @@
             overflow: hidden;
             text-overflow: ellipsis;
 
+            word-wrap: break-word;
+
             &__own {
                 color: #1E1E1E;
             }
@@ -65,9 +66,7 @@
     }
 
     &__info {
-        width: 10%;
-
-        flex-shrink: 0;
+        width: 25px;
 
         &__time {
             margin-bottom: 18px;
