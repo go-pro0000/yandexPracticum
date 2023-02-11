@@ -1,17 +1,8 @@
 ---
 variable: Hello world
 ---
-<html>
-
-<head></head>
-
-<body>
   <div class="main">{{ variable }}</div>
-  {{> button label="Click me" }}
-  {{> button label="Click me 1" }}
-  {{> button label="Click me 2" }}
-  {{> button label="Click me 3" }}
-  <a href="/src/pages/signup/signup.hbs">Регистрация</a>
-</body>
-
-</html>
+  
+  <a href="/src/pages/auth/signin/signin.hbs">Вход</a>
+  <a href="/src/pages/auth/signup/signup.hbs">Регистрация</a>
+  <a href="/src/pages/dialogs/dialogs.hbs">Диалоги</a>

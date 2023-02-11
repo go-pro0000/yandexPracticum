@@ -1,0 +1,181 @@
+---
+cards: [
+{
+img: "",
+name: "Андрей Андрей",
+own: false,
+text: "Изображение",
+time: "10:49",
+quantity: 2,
+},
+{
+img: "",
+name: "Киноклуб",
+own: true,
+text: "стикер",
+time: "12:00",
+quantity: 0,
+},
+{
+img: "",
+name: "Илья",
+own: false,
+text: "Друзья, у меня для вас особенный выпуск новостей! блаблабла",
+time: "10:49",
+quantity: 4,
+},
+{
+img: "",
+name: "Андрей Андрей",
+own: false,
+text: "Изображение",
+time: "10:49",
+quantity: 2,
+},
+{
+img: "",
+name: "Андрей",
+own: false,
+text: "Изображение",
+time: "10:49",
+quantity: 2,
+},
+{
+img: "",
+name: "Андрей",
+own: false,
+text: "Изображение",
+time: "10:49",
+quantity: 2,
+},
+{
+img: "",
+name: "Андрей Андрей",
+own: false,
+text: "Изображение",
+time: "10:49",
+quantity: 2,
+},
+{
+img: "",
+name: "Андрей",
+own: false,
+text: "Изображение",
+time: "10:49",
+quantity: 2,
+},
+{
+img: "",
+name: "Андрей",
+own: false,
+text: "Изображение",
+time: "10:49",
+quantity: 2,
+},
+{
+img: "",
+name: "Андрей Андрей",
+own: false,
+text: "Изображение",
+time: "10:49",
+quantity: 2,
+},
+{
+img: "",
+name: "Андрей",
+own: false,
+text: "Изображение",
+time: "10:49",
+quantity: 2,
+},
+{
+img: "",
+name: "Андрей",
+own: false,
+text: "Изображение",
+time: "10:49",
+quantity: 2,
+},
+{
+img: "",
+name: "Андрей Андрей",
+own: false,
+text: "Изображение",
+time: "10:49",
+quantity: 2,
+},
+{
+img: "",
+name: "Андрей",
+own: false,
+text: "Изображение",
+time: "10:49",
+quantity: 2,
+},
+{
+img: "",
+name: "Андрей",
+own: false,
+text: "Изображение",
+time: "10:49",
+quantity: 2,
+},
+{
+img: "",
+name: "Андрей Андрей",
+own: false,
+text: "Изображение",
+time: "10:49",
+quantity: 2,
+},
+{
+img: "",
+name: "Андрей",
+own: false,
+text: "Изображение",
+time: "10:49",
+quantity: 2,
+},
+{
+img: "",
+name: "Андрей",
+own: false,
+text: "Изображение",
+time: "10:49",
+quantity: 2,
+},
+]
+---
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="./dialogs.scss">
+    <link rel="stylesheet" href="/src/styles/dialogCard.scss">
+    <link rel="stylesheet" href="/src/styles/root.scss">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__leftPart">
+            <div class="container__leftPart__bakToProfile">
+                <span class="container__leftPart__bakToProfile__text">Профиль</span>
+                <img src="/static/img/chebron-right.svg" alt="" class="container__leftPart__bakToProfile__button">
+            </div>
+
+            <input class="container__leftPart__inputSearch" type="text" placeholder="🔍 Поиск">
+
+            <div class="container__leftPart__cards">
+                {{#each cards}}
+                {{> dialogCard data = this }}
+                {{/each}}
+            </div>
+        </div>
+
+        <div class="container__rightPart">
+            {{> dialog }}
+        </div>
+    </div>
+</body>
+
+</html>
