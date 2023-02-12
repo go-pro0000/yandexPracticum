@@ -1,3 +1,6 @@
 import Handlebars from 'handlebars';
 
-Handlebars.registerPartial();
+Handlebars.registerHelper('isImg', function (value) {
+    return value === 'img';
+});
+  

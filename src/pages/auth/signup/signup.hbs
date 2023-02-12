@@ -1,41 +1,45 @@
 ---
 form: [
-    {
-        type: "text",
-        name: "email",
-        placeholder: "Почта",
-    },
-    {
-        type: "text",
-        name: "login",
-        placeholder: "Логин",
-    },
-    {
-        type: "text",
-        name: "first_name",
-        placeholder: "Имя",
-    },
-    {
-        type: "text",
-        name: "second_name",
-        placeholder: "Фамилия",
-    },
-    {
-        type: "text",
-        name: "phone",
-        placeholder: "Телефон",
-    },
-    {
-        type: "password",
-        name: "password",
-        placeholder: "Пароль",
-    },
-    {
-        type: "password",
-        name: "password",
-        placeholder: "Пароль (еще раз)",
-    },
-    ]
+{
+type: "text",
+name: "email",
+placeholder: "Почта",
+},
+{
+type: "text",
+name: "login",
+placeholder: "Логин",
+},
+{
+type: "text",
+name: "first_name",
+placeholder: "Имя",
+},
+{
+type: "text",
+name: "second_name",
+placeholder: "Фамилия",
+},
+{
+type: "text",
+name: "phone",
+placeholder: "Телефон",
+},
+{
+type: "password",
+name: "password",
+placeholder: "Пароль",
+color: "red",
+},
+{
+type: "password",
+name: "password",
+placeholder: "Пароль (еще раз)",
+validationError: true,
+validationErrorMessage: 'Пароли не совпадают',
+color: "red",
+},
+]
 ---
 
 <html>
@@ -51,7 +55,10 @@ form: [
             <p class="container__form__title">Регистрация</p>
 
             {{#each form}}
-            <input type={{this.type}} name={{this.name}} placeholder='{{this.placeholder}}'>
+                <input type={{this.type}} name={{this.name}} placeholder='{{this.placeholder}}' style="color: {{this.color}}">
+                {{#if validationError}}
+                    <span class="container__form__errorInput">{{this.validationErrorMessage}}</span>
+                {{/if}}
             {{/each}}
             <button>Зарегистрироваться</button>
             <a href="/src/pages/auth/signin/signin.hbs">Войти</a>

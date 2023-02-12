@@ -4,11 +4,13 @@ form: [
 type: "text",
 name: "login",
 placeholder: "Логин",
+validationError: true,
 },
 {
 type: "password",
 name: "password",
 placeholder: "Пароль",
+validationError: false,
 },
 ]
 ---
@@ -26,7 +28,10 @@ placeholder: "Пароль",
             <p class="container__form__title">Вход</p>
 
             {{#each form}}
-            <input type={{this.type}} name={{this.name}} placeholder={{this.placeholder}}>
+                <input type={{this.type}} name={{this.name}} placeholder={{this.placeholder}}>
+                {{#if this.validationError}}
+                    <span class="container__form__inputError">Неверный {{this.placeholder}}</span>
+                {{/if}}
             {{/each}}
             <button>Авторизоваться</button>
             <a href="/src/pages/auth/signup/signup.hbs">Нет аккаунта?</a>

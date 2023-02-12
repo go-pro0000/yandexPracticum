@@ -1,5 +1,5 @@
 .dialogCard {
-    padding: 12px;
+    padding: 12px 0;
 
     border-top: 1px solid #EAEAEA;
     border-bottom: 1px solid #EAEAEA;
@@ -13,14 +13,13 @@
     &__image {
         width: 47px;
         height: 47px;
-        margin-left: 10px;
 
         background-color: #EFEFEF;
         border-radius: 50%;
     }
 
     &__content {
-        width: 54%;
+        width: calc(100% - 47px - 25px - 10px - 20px);
         height: 47px;
         margin-left: 10px;
         margin-right: 20px;
