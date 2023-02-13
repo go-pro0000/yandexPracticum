@@ -1,0 +1,81 @@
+---
+{
+img: "/static/img/profilePage/icon.svg",
+name: "Иван",
+form: [
+    {
+        label: "Почта",
+        value: "pochta@yandex.ru",
+    },
+    {
+        label: "Логин",
+        value: "ivanivanov",
+    },
+    {
+        label: "Имя",
+        value: "Иван",
+    },
+    {
+        label: "Фамилия",
+        value: "Иванов",
+    },
+    {
+        label: "Имя в чате",
+        value: "Иван",
+    },
+    {
+        label: "Телефон",
+        value: "+7 (909) 967 30 30",
+    },
+],
+settings: {
+    noActions: false,
+},
+}
+---
+<html>
+
+<head>
+    <link rel="stylesheet" href="./profile.scss">
+    <link rel="stylesheet" href="/src/styles/dialogPageInput.scss">
+    <link rel="stylesheet" href="/src/styles/dialogPageForm.scss">
+    <link rel="stylesheet" href="/src/styles/button.scss">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__backTo">
+            <a href="/src/index.hbs">
+                <img src="/static/img/profilePage/backTo.svg">
+            </a>
+        </div>
+
+        <div class="container__profile">
+            <img class="container__profile__img" src='{{img}}'>
+            {{#if settings.noActions}}
+                <span class="container__profile__name">{{name}}</span>
+            {{/if}}
+            <div class="container__profile__formContainer">
+                {{> dialogPageForm data = form}}
+            </div>
+            {{#if settings.noActions}}
+                <div class="container__profile__settings">
+                    <div class="container__profile__settings__changeData">
+                        <span>Изменить данные</span>
+                    </div>
+                    <div class="container__profile__settings__changePassword">
+                        <span>Изменить пароль</span>
+                    </div>
+                    <div class="container__profile__settings__exit">
+                        <span>Выйти</span>
+                    </div>
+                </div>
+            {{/if}}
+            <div class="container__profile__buttonContainer">
+                {{> button text = "Сохранить"}}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

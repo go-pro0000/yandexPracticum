@@ -47,6 +47,7 @@ color: "red",
 <head>
     <link rel="stylesheet" href="/src/pages/auth/auth.scss">
     <link rel="stylesheet" href="./signup.scss">
+    <link rel="stylesheet" href="/src/styles/button.scss">
 </head>
 
 <body>
@@ -60,7 +61,7 @@ color: "red",
                     <span class="container__form__errorInput">{{this.validationErrorMessage}}</span>
                 {{/if}}
             {{/each}}
-            <button>Зарегистрироваться</button>
+            {{> button text="Зарегистрироваться"}}
             <a href="/src/pages/auth/signin/signin.hbs">Войти</a>
         </form>
     </div>

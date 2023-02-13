@@ -234,6 +234,7 @@
     <link rel="stylesheet" href="/src/styles/dialogCard.scss">
     <link rel="stylesheet" href="/src/styles/dialog.scss">
     <link rel="stylesheet" href="/src/styles/addDeleteUser.scss">
+    <link rel="stylesheet" href="/src/styles/button.scss">
 </head>
 
 <body>
@@ -241,7 +242,9 @@
         <div class="container__leftPart">
             <div class="container__leftPart__bakToProfile">
                 <span class="container__leftPart__bakToProfile__text">Профиль</span>
-                <img src="/static/img/dialogsPage/chebron-right.svg" alt="" class="container__leftPart__bakToProfile__button">
+                <a href="/src/pages/profile/profile.hbs">
+                    <img src="/static/img/dialogsPage/chebron-right.svg" alt="" class="container__leftPart__bakToProfile__button">
+                </a>
             </div>
 
             <input class="container__leftPart__inputSearch" type="text" placeholder="🔍 Поиск">

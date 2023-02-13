@@ -20,6 +20,7 @@ validationError: false,
 <head>
     <link rel="stylesheet" href="/src/pages/auth/auth.scss">
     <link rel="stylesheet" href="./signin.scss">
+    <link rel="stylesheet" href="/src/styles/button.scss">
 </head>
 
 <body>
@@ -33,7 +34,7 @@ validationError: false,
                     <span class="container__form__inputError">Неверный {{this.placeholder}}</span>
                 {{/if}}
             {{/each}}
-            <button>Авторизоваться</button>
+            {{> button text="Авторизоваться"}}
             <a href="/src/pages/auth/signup/signup.hbs">Нет аккаунта?</a>
         </form>
     </div>
