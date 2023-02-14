@@ -29,9 +29,52 @@
         flex-direction: column;
         align-items: center;
 
-        &__img {
+        &__imgContainer {
+            position: relative;
+
+            height: 130px;
+            width: 130px;
+
             margin-top: 60px;
             margin-bottom: 21px;
+
+            &:hover .container__profile__imgContainer__hover {
+                visibility: visible;
+            }
+
+            &__hover {
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                width: 130px;
+                height: 130px;
+
+                border-radius: 50%;
+                background: #000000;
+                opacity: 0.5;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                visibility: hidden;
+
+                span {
+                    width: 50%;
+
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 13px;
+                    color: #FFFFFF;
+                    text-align: center;
+
+                    z-index: 2;
+
+                    display: inline-block;
+                }
+            }
         }
 
         &__name {
